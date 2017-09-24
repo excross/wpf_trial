@@ -1,0 +1,19 @@
+﻿<Window x:Class="wpf_trial.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_trial"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="200">
+
+    <Grid>
+        <TextBox x:Name="textBox" Text="{Binding InputText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+        <Button x:Name="buttonAddItem" Command="{Binding AddItem}" Content="Add Item" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="175"/>
+        <Button x:Name="buttonReset" Command="{Binding ResetItem}" Content="Reset" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Width="175"/>
+        <Label x:Name="label" Content="{Binding StoredText, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="175" Height="58"/>
+    </Grid>
+
+</Window>
